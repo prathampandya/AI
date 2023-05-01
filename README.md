@@ -37,3 +37,6 @@ The script also allows capturing images of new people by using the TakeImages() 
 
 Credits
 This script was created with the help of OpenCV and Face-Recognition libraries. Special thanks to the developers of these libraries for making face recognition much simpler and easier.
+
+
+[https://youtu.be/Zsk2TavQWYk](url)
