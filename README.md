@@ -1,8 +1,39 @@
 # AI
 AI project Sem 6
-The code provided is an implementation of face recognition using OpenCV and face_recognition libraries in Python. The main functionality of the code is to detect faces in a video feed and recognize the faces using a pre-trained model.
-The code begins by importing the required libraries, including cv2 and face_recognition. Then it loads all images from the database directory and encodes them using face_recognition.face_encodings. The known face encodings and names are stored in two separate lists.
-After loading the images and encoding them, the code initializes the video capture object using cv2.VideoCapture. It also initializes the face detection cascade classifier using cv2.CascadeClassifier.
-The code then enters an infinite loop that reads frames from the video feed using cap.read(). It converts each frame to grayscale and detects faces in the frame using the face detection cascade classifier. For each detected face, the code extracts the face image, encodes it using face_recognition.face_encodings, and compares the encoding to all known face encodings using face_recognition.compare_faces.
-The code then calculates the distance between the face encoding and all known face encodings using face_recognition.face_distance. It finds the index of the best match, gets the name of the best match, and calculates the percentage match.
-Finally, the code draws a rectangle around the detected face, displays the name and percentage match, and saves five images of the face with unique names. It also exits the loop if the 'q' key is pressed.
+
+Face Recognition Using OpenCV and Face-Recognition Python Libraries
+This is a Python script that uses OpenCV and Face-Recognition libraries to recognize faces from a live video stream or a set of images. The script can be used for various purposes, such as attendance systems or security systems.
+
+Prerequisites
+To use this script, you need to have the following installed:
+
+Python 3.6 or higher
+OpenCV
+Face-Recognition
+numpy
+Pillow
+How to Use
+Clone this repository or download the code as a ZIP file.
+
+Navigate to the project directory in your terminal or command prompt.
+
+Run the following command to install the necessary libraries:
+
+pip install opencv-python
+pip install numpy
+pip install face_recognition
+
+Prepare a set of images of the people you want to recognize and save them in a directory. Make sure each image has only one face visible and the name of the file should be the name of the person.
+
+Run the following command:
+
+python face_recognition.py
+
+This will open a live video stream and start recognizing faces. The name and percentage match of the recognized person will be displayed in a rectangle around their face. You can press the 'q' key to quit the stream.
+
+Additional Features
+The script also captures 5 images of the recognized person when a match is found and saves them in the same directory as the script.
+The script also allows capturing images of new people by using the TakeImages() function which is currently commented out in the script.
+
+Credits
+This script was created with the help of OpenCV and Face-Recognition libraries. Special thanks to the developers of these libraries for making face recognition much simpler and easier.
